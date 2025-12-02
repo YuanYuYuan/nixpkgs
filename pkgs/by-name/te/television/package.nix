@@ -41,12 +41,6 @@ let
 
     postInstall = ''
       installManPage target/${stdenv.hostPlatform.rust.cargoShortTarget}/assets/tv.1
-
-      installShellCompletion --cmd tv \
-        television/utils/shell/completion.bash \
-        television/utils/shell/completion.fish \
-        television/utils/shell/completion.nu \
-        television/utils/shell/completion.zsh
     '';
 
     passthru = {
